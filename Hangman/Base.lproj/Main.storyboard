@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJM-fn-fa5">
+                                <rect key="frame" x="482" y="20" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3o-OL-IqC">
+                                <rect key="frame" x="299" y="497" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylp-TB-dXj">
+                                <rect key="frame" x="268" y="476" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLf-QB-Ivd">
+                                <rect key="frame" x="447" y="515" width="54" height="26"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRI-3c-dAK">
+                                <rect key="frame" x="254" y="515" width="165" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sRI-3c-dAK" secondAttribute="height" multiplier="11:2" id="HkL-nI-FlJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2jk-aL-p0k">
+                                <rect key="frame" x="127" y="143" width="345" height="314"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3n-l0-mk1">
+                                <rect key="frame" x="14" y="20" width="71" height="30"/>
+                                <state key="normal" title="Start Over"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Guesses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-Dq-Vvf">
+                                <rect key="frame" x="20" y="62" width="70.5" height="41.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2jk-aL-p0k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="107" id="5AJ-TR-ukU"/>
+                            <constraint firstItem="bmh-Dq-Vvf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="77A-np-tdc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2jk-aL-p0k" secondAttribute="trailing" constant="108" id="7EO-Dq-kSu"/>
+                            <constraint firstItem="2jk-aL-p0k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="123" id="D1c-hD-5Y1"/>
+                            <constraint firstItem="bmh-Dq-Vvf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="FNH-jR-aL6"/>
+                            <constraint firstItem="Ylp-TB-dXj" firstAttribute="top" secondItem="2jk-aL-p0k" secondAttribute="bottom" constant="19" id="Guz-VH-2NC"/>
+                            <constraint firstItem="sRI-3c-dAK" firstAttribute="top" secondItem="2jk-aL-p0k" secondAttribute="bottom" constant="58" id="K0M-PQ-9uQ"/>
+                            <constraint firstItem="qLf-QB-Ivd" firstAttribute="leading" secondItem="sRI-3c-dAK" secondAttribute="trailing" constant="29" id="UcS-Fl-Xe9"/>
+                            <constraint firstItem="S3n-l0-mk1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="V7R-aO-KZr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NJM-fn-fa5" secondAttribute="trailing" constant="23" id="YfJ-Ro-zuO"/>
+                            <constraint firstItem="S3n-l0-mk1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dNV-af-cM2"/>
+                            <constraint firstItem="Ylp-TB-dXj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ev0-2V-zpc"/>
+                            <constraint firstItem="qLf-QB-Ivd" firstAttribute="top" secondItem="2jk-aL-p0k" secondAttribute="bottom" constant="58" id="fRd-Na-QLJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qLf-QB-Ivd" secondAttribute="trailing" constant="44" id="hxS-rQ-yj8"/>
+                            <constraint firstItem="NJM-fn-fa5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="l47-zu-C3X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2jk-aL-p0k" secondAttribute="bottom" constant="143" id="zoL-Le-0dN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guessInput" destination="sRI-3c-dAK" id="K8j-Fo-WxR"/>
+                        <outlet property="guesses" destination="bmh-Dq-Vvf" id="f5X-HC-ua7"/>
+                        <outlet property="imageView" destination="2jk-aL-p0k" id="We7-UB-XKO"/>
+                        <outlet property="newgameButton" destination="NJM-fn-fa5" id="Wg6-aM-wuf"/>
+                        <outlet property="remainingLetters" destination="Ylp-TB-dXj" id="tfC-7i-tO1"/>
+                        <outlet property="startoverButton" destination="S3n-l0-mk1" id="jEB-q3-0Lp"/>
+                        <outlet property="submitGuess" destination="qLf-QB-Ivd" id="4F2-ay-ajy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="326" y="415"/>
+        </scene>
+    </scenes>
+</document>
