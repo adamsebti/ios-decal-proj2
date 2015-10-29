@@ -47,7 +47,7 @@ class HangmanViewController: UIViewController, UITextFieldDelegate {
         self.remainingLetters.text = ""
         stage = 1
         self.stop = false
-        var image: UIImage! = UIImage.init(contentsOfFile: "/Users/mac/documents/ios-decal-hw3/hangman/hangman1.gif")
+        var image: UIImage! = UIImage(named: "hangman1.gif")
         self.imageView.image = image
         guesses!.text = "Guesses: "
         correct = 0
@@ -85,7 +85,7 @@ class HangmanViewController: UIViewController, UITextFieldDelegate {
         if(stage == 7){
             stopGame()
         }
-        var image: UIImage! = UIImage.init(contentsOfFile: "/Users/mac/documents/ios-decal-hw3/hangman/hangman" + String(stage) + ".gif")
+        var image: UIImage! = UIImage(named: "hangman" + String(stage) + ".gif")
         self.imageView.image = image
         if(guesses!.text!.characters.count > 9){
             guesses.text = guesses.text! + ", " + guess!
@@ -153,7 +153,7 @@ class HangmanViewController: UIViewController, UITextFieldDelegate {
         stage = 1
         self.stop = false
         self.game.guessedLetters = NSMutableArray()
-        var image: UIImage! = UIImage.init(contentsOfFile: "/Users/mac/documents/ios-decal-hw3/hangman/hangman1.gif")
+        var image: UIImage! = UIImage(named: "hangman1.gif")
         self.imageView.image = image
         guesses!.text = "Guesses: "
         correct = 0
